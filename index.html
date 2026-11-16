@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subscription Cost Accumulator 💳</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="app-card">
+        <!-- Header -->
+        <header class="app-header">
+            <span class="badge">kikisaja No. 145</span>
+            <h1>💳 SUBSCRIPTION ACCUMULATOR</h1>
+            <p>Kelola dan hitung total biaya langganan aplikasimu per bulan & tahun!</p>
+        </header>
+
+        <!-- Ringkasan Total Biaya -->
+        <div class="summary-grid">
+            <div class="summary-box monthly">
+                <span class="summary-label">Total Per Bulan</span>
+                <strong id="total-monthly">Rp 0</strong>
+            </div>
+            <div class="summary-box yearly">
+                <span class="summary-label">Total Per Tahun</span>
+                <strong id="total-yearly">Rp 0</strong>
+            </div>
+        </div>
+
+        <!-- Form Tambah Langganan -->
+        <form id="sub-form" class="sub-form">
+            <div class="input-group">
+                <label for="sub-name">Nama Layanan (Streaming, Cloud, dll):</label>
+                <input type="text" id="sub-name" placeholder="Contoh: Netflix / Spotify" required autocomplete="off">
+            </div>
+
+            <div class="input-group">
+                <label for="sub-cost">Biaya Per Bulan (Rp):</label>
+                <input type="number" id="sub-cost" placeholder="Contoh: 54000" min="0" required>
+            </div>
+
+            <button type="submit" class="btn-submit">➕ TAMBAH LANGGANAN</button>
+        </form>
+
+        <!-- Daftar List Langganan -->
+        <div class="sub-list-section">
+            <span class="section-title">Daftar Langganan Aktif:</span>
+            <div class="sub-container" id="sub-container">
+                <!-- Data list dirender dinamis via JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
